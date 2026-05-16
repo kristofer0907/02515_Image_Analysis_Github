@@ -20,9 +20,8 @@ def compute_outline(bin_img):
     return outline
 
 # From https://scikit-image.org/docs/stable/auto_examples/applications/plot_morphology.html
-def plot_comparison(original, filtered, filter_name):
-    fig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(8, 4), sharex=True,
-                                   sharey=True)
+def plot_comparison(original, filtered, filter_name, x_dimension, y_dimension):
+    fig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(x_dimension, y_dimension), sharex=True, sharey=True)
     ax1.imshow(original, cmap=plt.cm.gray)
     ax1.set_title('original')
     ax1.axis('off')
