@@ -80,8 +80,8 @@ def capture_from_camera_and_show_images():
         show_in_moved_window('Difference image', dif_img, 1200, 10)
 
         # Old frame is updated
-        frame_gray = new_frame_gray
-
+        
+        frame_gray = alpha*frame_gray+(1-alpha)*new_frame_gray
         if cv2.waitKey(1) == ord('q'):
             stop = True
 
